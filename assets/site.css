@@ -53,7 +53,7 @@ h1 { font-size: clamp(3rem, 9vw, 6.5rem); font-weight: 550; letter-spacing: -.06
 .prose table { display: block; overflow-x: auto; border-collapse: collapse; }
 .prose th, .prose td { padding: .7rem 1rem; border: 1px solid var(--border); text-align: left; }
 .prose hr { border: 0; border-top: 1px solid var(--border); margin-block: 2.5rem; }
-.post-end { display: inline-block; margin-top: 3rem; }
+.post-end { display: inline-block; margin-top: 3rem; margin-right: 1.5rem; }
 .editor-entry { max-width: 42rem; padding-block: 5rem 7rem; }
 .editor-entry h1 { font-size: clamp(2.5rem, 7vw, 4rem); }
 .editor-entry p { color: var(--muted); font-size: 1.125rem; line-height: 1.75; }

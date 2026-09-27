@@ -24,5 +24,4 @@ exclude:
   - vendor
   - tests
   - .bundle
-  - .pages.yml
   - .github
