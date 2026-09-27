@@ -1,0 +1,28 @@
+title: fabianlog
+description: The personal website and articles of Fabian Roh.
+url: https://fabianlog.github.io
+baseurl: ""
+timezone: Asia/Seoul
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+collections:
+  articles:
+    output: true
+    permalink: /articles/:name/
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tests
+  - .bundle
+  - .pages.yml
+  - .github

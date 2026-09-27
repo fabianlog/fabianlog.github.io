@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <a class="back-link" href="{{ '/#articles-title' | relative_url }}">← All articles</a>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time><span>Fabian Roh</span></p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary and page.summary != '' %}<p class="post-summary">{{ page.summary | escape }}</p>{% endif %}
+    {% if page.cover and page.cover != '' %}<figure class="post-cover"><img src="{{ page.cover | relative_url | escape }}" alt="{{ page.cover_alt | default: '' | escape }}" decoding="async"></figure>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  <a class="back-link post-end" href="{{ '/#articles-title' | relative_url }}">← All articles</a>
+</article>

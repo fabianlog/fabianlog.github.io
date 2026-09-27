@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' https: data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'">
+    <meta name="description" content="{{ page.summary | default: page.description | default: site.description | escape }}">
+    <meta name="theme-color" content="#101719">
+    {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+    <title>{% if page.title %}{{ page.title | escape }} — {% endif %}fabianlog{% unless page.title %} — Fabian Roh{% endunless %}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="fabianlog home">fabian<span>log</span></a>
+      <nav aria-label="Main navigation"><a href="{{ '/#articles-title' | relative_url }}">Articles</a><a href="https://github.com/fabiankmroh">GitHub</a></nav>
+    </header>
+    <main id="main" class="shell">{{ content }}</main>
+    <footer class="site-footer shell"><span>Fabian Roh · fabianlog</span><a href="{{ '/admin/' | relative_url }}">Write</a></footer>
+  </body>
+</html>
